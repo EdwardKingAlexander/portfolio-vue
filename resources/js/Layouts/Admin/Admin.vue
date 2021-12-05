@@ -15,11 +15,11 @@
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                <BreezeNavLink :href="route('admin.dashboard')" :active="route().current('admin.dashboard')">
                                     Dashboard
                                 </BreezeNavLink>
 
-                                <BreezeNavLink :href="route('projects.index')" :active="route().current('projects.index')">
+                                <BreezeNavLink :href="route('admin.projects.index')" :active="route().current('admin.projects.index')">
                                     Project Manager
                                 </BreezeNavLink>
                             </div>
@@ -65,8 +65,11 @@
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                        <BreezeResponsiveNavLink :href="route('admin.dashboard')" :active="route().current('admin.dashboard')">
                             Dashboard
+                        </BreezeResponsiveNavLink>
+                        <BreezeResponsiveNavLink :href="route('admin.projects.index')" :active="route().current('admin.projects.index')">
+                            Projects
                         </BreezeResponsiveNavLink>
                     </div>
 

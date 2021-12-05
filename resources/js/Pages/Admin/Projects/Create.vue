@@ -1,26 +1,27 @@
 <template>
-    <Head title="Project Manager" />
+    <Head title="Create a New Project" />
 
     <AdminLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                Project Manager
+                Create a New Project
             </h2>
+
+            <ProjectForm />
         </template>
-        <Table />
     </AdminLayout>
 </template>
 
 <script>
 import AdminLayout from '@/Layouts/Admin/Admin.vue'
-import Table from '@/Components/Projects/Table.vue';
+import ProjectForm from '@/Components/Projects/Components/CreateProjectForm.vue';
 import { Head } from '@inertiajs/inertia-vue3';
 
 export default {
     components: {
         AdminLayout,
-        Table,
         Head,
+        ProjectForm
     },
 }
 </script>

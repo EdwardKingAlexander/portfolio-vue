@@ -49,11 +49,16 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->namespace($this->namespace)
-                ->group(base_path('routes/Games/TicTacToe/routes.php'));
+                ->group(base_path('routes/Admin/Games/TicTacToe/routes.php'));
 
-                Route::middleware(['auth', 'web'])
+            Route::middleware(['auth', 'web', 'admin'])
                 ->namespace($this->namespace)
-                ->group(base_path('routes/Projects/routes.php'));
+                ->group(base_path('routes/Admin/Projects/routes.php'));
+                
+            Route::middleware(['auth', 'web', 'admin'])
+                ->namespace($this->namespace)
+                ->group(base_path('routes/Admin/routes.php'));
+
 
         });
     }

@@ -1,21 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-
+use App\Http\Controllers\Controller;
+use App\Models\Project;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
-    public function __construct()
+    public function index()
     {
-        $this->middleware('admin');
-    }
-    
-    public function index() 
-    {
-        return Inertia::render('Auth/Projects/Index');
+        $projects = Project::all();
+
+        return Inertia::render('Admin/Projects/Index', ['projects' => $projects]);
     }
 
     /**
@@ -25,9 +24,9 @@ class ProjectController extends Controller
      */
 
 
-    public function create()
+    public function create(Request $request)
     {
-        return Inertia::render('Auth/Projects/Create');
+        return Inertia::render('Admin/Projects/Create');
     }
 
     /**
@@ -38,7 +37,19 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'projectName' => 'required',
+        ]);
+
+        Project::create([
+            'customer_id' => null,
+            'user_id' => Auth::user()->id,
+            'project_name' => $request->input('projectName'),
+            'completed' => false
+
+        ]);
+
+        return redirect('/admin/projects');
     }
 
     /**
@@ -49,7 +60,8 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        // dd(Project::find($id));
+        return Inertia::render('Admin/Projects/Show', ['project' => Project::find($id)]);
     }
 
     /**

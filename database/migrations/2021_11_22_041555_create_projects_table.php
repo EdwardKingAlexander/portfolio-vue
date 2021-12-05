@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('customer_id')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->string('project_name');
             $table->boolean('completed');
         });

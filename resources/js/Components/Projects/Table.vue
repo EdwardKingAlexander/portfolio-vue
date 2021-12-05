@@ -19,13 +19,15 @@
 
             </tr>
           </thead>
+
           <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
+
+            <tr v-for="project in this.projects" :key="project.id">
               <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                   <div class="ml-4">
-                    <div class="text-sm font-medium text-gray-900">
-                      <Link>Project Name</Link>
+                    <div class="text-sm font-medium text-gray-900 underline">
+                      <Link :href="route('admin.projects.show', {id: project.id})" class="p-2 rounded hover:bg-blue-400 hover:text-white">{{ project.project_name }}</Link>
                     </div>
                   </div>
                 </div>
@@ -35,10 +37,10 @@
                 <div class="text-sm text-gray-500">Optimization</div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
-                <span v-if="open" class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
+                <span v-if="project.completed" class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
                   In Progress
                 </span>
-                <span v-else class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
+                <span v-else class="inline-flex px-2 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full">
                   Finished
                 </span>
               </td>
@@ -63,8 +65,12 @@ export default {
     },
     data() {
         return {
-            open: false
+            open: false,
         }
+    },
+    props: {
+      projects: Object
     }
+    
 }
 </script>

@@ -13,7 +13,6 @@
                 Create New Project
             </Link>
         </template>
-
         <Table :projects="projects" />
     </AdminLayout>
 </template>
@@ -26,14 +25,13 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
 
 export default {
     components: {
-            AdminLayout,
-            Table,
-            Head,
-            Link
-            },
-    props:{
-        projects: Object
-    }
-
+        AdminLayout,
+        Table,
+        Head,
+        Link,
+    },
+    props: {
+        projects: Object,
+    },
 };
 </script>

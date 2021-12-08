@@ -21,10 +21,10 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
 export default {
     components: {
         AdminLayout,
-            Head,
-            Link,
-            ProjectFeature
-            },
+        Head,
+        Link,
+        ProjectFeature
+    },
     props:{
         project: Object
     }

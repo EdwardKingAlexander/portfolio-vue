@@ -7,7 +7,7 @@
                 {{ project.project_name }}
             </h2>
 
-            <ProjectFeature />
+            <ProjectFeature :project="project" />
         </template>
     </AdminLayout>
 </template>

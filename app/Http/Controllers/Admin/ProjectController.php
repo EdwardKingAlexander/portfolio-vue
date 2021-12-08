@@ -63,7 +63,6 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        // dd(Project::find($id));
         return Inertia::render('Admin/Projects/Show', ['project' => Project::find($id)]);
     }
 
@@ -75,7 +74,7 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        return Inertia::render('Admin/Projects/Edit', ['project' => Project::findOrFail($id)]);
     }
 
     /**
@@ -87,7 +86,9 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $project->update(['project_name' => $request->projectName]);
+        return redirect("/admin/projects/$id");
     }
 
     /**
@@ -98,6 +99,7 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Project::findOrFail($id)->delete();
+        return redirect('/admin/projects');
     }
 }

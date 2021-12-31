@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\ProjectFeature;
+
 class Project extends Model
 {
     use HasFactory;
@@ -15,5 +17,15 @@ class Project extends Model
 
     // has features
 
+    public function features()
+    {
+        return $this->hasMany(ProjectFeature::class)->orderBy('due_date');
+    }
+
     // has bugs
+
+    public function bugs() 
+    {
+        return $this->hasMany(Bug::class);
+    }
 }

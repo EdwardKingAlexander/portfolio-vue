@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use Inertia\Inertia;
+
 use App\Http\Controllers\Controller;
 
 use App\Models\ProjectFeature;
-use App\Http\Requests\StoreProjectFeatureRequest;
-use App\Http\Requests\UpdateProjectFeatureRequest;
+use App\Models\Project;
+
+use Illuminate\Http\Request;
 
 class ProjectFeatureController extends Controller
 {
@@ -16,9 +18,14 @@ class ProjectFeatureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        return Inertia::render('Admin/Projects/Features/Index');
+        $project = Project::findOrFail($id);
+        return Inertia::render('Admin/Projects/Features/Index', 
+        [
+            'project' => $project,
+            'features' => $project->features
+        ]);
     }
 
     /**
@@ -37,9 +44,24 @@ class ProjectFeatureController extends Controller
      * @param  \App\Http\Requests\StoreProjectFeatureRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProjectFeatureRequest $request)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'projectId' => 'required',
+            'featureName' => 'required|string',
+            'featureDescription' => 'required|string',
+            'dueDate' => 'required|string'
+
+        ]);
+
+        ProjectFeature::create([
+            'project_id' => $request->projectId,
+            'project_feature' => $request->featureName,
+            'feature_description' => $request->featureDescription,
+            'due_date' => $request->dueDate
+        ]);
+
+        return redirect("/admin/projects/$request->projectId/features");
     }
 
     /**
@@ -48,9 +70,16 @@ class ProjectFeatureController extends Controller
      * @param  \App\Models\ProjectFeature  $projectFeature
      * @return \Illuminate\Http\Response
      */
-    public function show(ProjectFeature $projectFeature)
+    public function show(Request $request, $project, $feature)
     {
-        //
+        $project = Project::findOrFail($project);
+        $feature = ProjectFeature::findOrFail($feature);
+
+       
+        return Inertia::render('Admin/Projects/Features/Show', [
+             'project' =>  $project,
+             'feature' => $feature
+         ]);
     }
 
     /**
@@ -59,7 +88,7 @@ class ProjectFeatureController extends Controller
      * @param  \App\Models\ProjectFeature  $projectFeature
      * @return \Illuminate\Http\Response
      */
-    public function edit(ProjectFeature $projectFeature)
+    public function edit(Request $request)
     {
         //
     }
@@ -67,13 +96,17 @@ class ProjectFeatureController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateProjectFeatureRequest  $request
+     
      * @param  \App\Models\ProjectFeature  $projectFeature
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProjectFeatureRequest $request, ProjectFeature $projectFeature)
+    public function update(Request $request)
     {
-        //
+        ProjectFeature::findOrFail($request->featureId)->update([
+            'completed' => $request->completed
+        ]);
+        
+        return redirect("/admin/projects/$request->projectId/features");
     }
 
     /**
@@ -82,8 +115,10 @@ class ProjectFeatureController extends Controller
      * @param  \App\Models\ProjectFeature  $projectFeature
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ProjectFeature $projectFeature)
+    public function destroy($id)
     {
         //
     }
+
+   
 }

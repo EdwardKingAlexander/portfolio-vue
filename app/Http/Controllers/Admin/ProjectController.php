@@ -84,11 +84,19 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id = null)
     {
-        $project = Project::findOrFail($id);
-        $project->update(['project_name' => $request->projectName]);
-        return redirect("/admin/projects/$id");
+        if ($request->projectName !== null) {
+            $project = Project::findOrFail($id);
+            $project->update(['project_name' => $request->projectName]);
+            return redirect("/admin/projects/$id");
+        } elseif ($request->completed !== null) {
+            $project = Project::findOrFail($request->id);
+            $project->update(['completed' => $request->completed]);
+            return redirect('/admin/projects');
+        } else {
+            return redirect('/admin/projects');
+        }
     }
 
     /**

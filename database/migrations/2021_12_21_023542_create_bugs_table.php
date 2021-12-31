@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjectFeaturesTable extends Migration
+class CreateBugsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateProjectFeaturesTable extends Migration
      */
     public function up()
     {
-        Schema::create('project_features', function (Blueprint $table) {
+        Schema::create('bugs', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->unsignedBigInteger('project_id');
             $table->foreign('project_id')->references('id')->on('projects');
-            $table->string('project_feature');
-            $table->text('feature_description');
-            $table->date('due_date');
-            $table->boolean('completed')->default(false);
-            $table->timestamps();
+            $table->text('bug_description');
+            $table->boolean('resolved')->default(false);
+            $table->text('solution')->default(null)->nullable();
         });
     }
 
@@ -32,6 +31,6 @@ class CreateProjectFeaturesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('project_features');
+        Schema::dropIfExists('bugs');
     }
 }

@@ -1,43 +1,40 @@
 <template>
-    <Head title="Project Manager" />
+    <Head :title="project.project_name + 'bugs List'" />
 
     <AdminLayout>
         <template #header>
-            <h2 :class=" darkMode ? 'text-white' : 'text-gray-800' + ' pb-3 text-xl font-semibold leading-tight'">
-                Project Manager 
+            <h2 class="pb-3 text-xl font-semibold leading-tight text-gray-800">
+                {{ project.project_name }} Bugs List
             </h2>
             <Link
                 class="p-2 text-white bg-blue-400 rounded hover:text-gray-800"
-                :href="route('admin.projects.create')"
+                :href="route('admin.projects.bugs.create', project.id)"
             >
-                Create New Project 
+                Create New Bug 
             </Link>
+            
+            
         </template>
-
-        {{ message }}
-        <Table :projects="projects" />
+        <BugsList :bugs="bugs" />
     </AdminLayout>
 </template>
 
 <script>
 import AdminLayout from "@/Layouts/Admin/Admin.vue";
-import Table from "@/Components/Projects/Table.vue";
+import BugsList from "@/Components/Projects/Bugs/BugsList.vue";
 
 import { Head, Link } from "@inertiajs/inertia-vue3";
 
 export default {
- 
     components: {
         AdminLayout,
-        Table,
         Head,
         Link,
+        BugsList,
     },
     props: {
-        projects: Object,
-        darkMode: Boolean,
-        message: String
+        bugs: Object,
+        project: Object
     },
-    
 };
 </script>

@@ -38,8 +38,8 @@
                         <div class="mt-1 sm:mt-0 sm:col-span-2">
                             <textarea
                                 v-model="form.solution"
-                                id="about"
-                                name="about"
+                                id="solution"
+                                name="solution"
                                 rows="3"
                                 class="
                                     max-w-lg
@@ -161,7 +161,6 @@ export default {
     methods: {
         toggleResolved() {
             this.form.resolved = !this.form.resolved;
-            console.log(this.bug.resolved);
         },
         saveData(projectId, bugId) {
             this.$inertia.put(

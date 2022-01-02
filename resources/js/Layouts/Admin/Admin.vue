@@ -46,6 +46,19 @@
                                 >
                                     Project Manager
                                 </BreezeNavLink>
+
+                                <BreezeNavLink
+                                    :darkMode="dark.enabled"
+                                    :href="route('admin.crm.index')"
+                                    :active="
+                                        $page.url.startsWith('/admin/crm')
+                                    "
+                                >
+                                    CRM
+                                </BreezeNavLink>
+
+                                
+                                
                             </div>
                         </div>
 

@@ -38,5 +38,5 @@ Route::resource('/admin/projects/{project}/bugs', BugContoller::class, [
     'as' => 'admin.projects'
 ]);
 
-//Route::get('/admin/projects/{project}/bugs', [BugContoller::class, 'index'])->name('admin.projects.bugs.index');
+
 

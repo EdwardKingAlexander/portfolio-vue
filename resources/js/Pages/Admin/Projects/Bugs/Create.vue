@@ -44,7 +44,7 @@
                     >
                     <div class="mt-1">
                         <textarea
-                            v-model="form.bugSolution"
+                            v-model="form.solution"
                             rows="4"
                             name="solution"
                             id="solution"
@@ -106,7 +106,7 @@ export default {
         return {
             form: {
                 bugDescription: null,
-                bugSolution: null,
+                solution: null,
                 projectId: this.project.id
             }
         }

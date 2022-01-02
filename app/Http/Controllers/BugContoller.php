@@ -49,7 +49,7 @@ class BugContoller extends Controller
 
         Bug::create([
             'bug_description' => $request->bugDescription,
-            'solution' => $request->bugSolution,
+            'solution' => $request->solution,
             'project_id' => $request->projectId
         ]);
 

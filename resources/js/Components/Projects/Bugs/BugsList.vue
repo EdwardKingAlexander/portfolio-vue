@@ -5,10 +5,10 @@
                 
                     <div class="px-4 py-4 sm:px-6">
                        
-                        <div class="mt-2 sm:flex sm:justify-between">
+                        <div class="my-2 sm:flex sm:justify-between">
                             <div class="sm:flex">
                                 <p
-                                    class="flex items-center text-sm text-gray-500 "
+                                    class="flex items-center text-md text-gray-700 "
                                 >
                                     {{ bug.bug_description }}
                                 </p>
@@ -17,14 +17,15 @@
                         </div>
 
                          <div class="flex items-center flex-wrap justify-between">
-                            <Link :href="route('admin.projects.bugs.show', [bug.project_id, bug.id])"  class="block hover:bg-gray-50">
+                            <Link :href="route('admin.projects.bugs.show', [bug.project_id, bug.id])"  class=" flex flex-wrap  hover:bg-gray-50">
                             <p
-                                class="text-sm font-medium text-indigo-600 truncate "
+                                :class="'text-sm flex flex-wrap font-bold ' + bug.resolved ? 'text-green-600' : 'text-red-600' "
                             >
                                 {{ bug.solution ? bug.solution : 'No current solution' }}
                             </p>
 
                             </Link>
+                            <br>
                             <div class="flex flex-shrink-0 ml-2">
                                 <button
                                     @click="toggleCompletion(bug.project_id, bug.id, bug.resolved)"

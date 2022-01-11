@@ -4,7 +4,7 @@
     <AdminLayout>
         <template #header>
             <h2 class="pb-3 text-xl font-semibold leading-tight text-gray-800">
-                Customer Relationship Manager
+                Add a Company
             </h2>
 
             
@@ -12,15 +12,14 @@
 
             <HeaderLinks />
         </template>
-        
-        <CompaniesList :companies="companies" />
+        <CompanyForm />
     </AdminLayout>
 </template>
 
 <script>
 import AdminLayout from "@/Layouts/Admin/Admin.vue";
 import HeaderLinks from "@/Components/Admin/CRM/HeaderLinks.vue";
-import CompaniesList from "@/Components/Admin/CRM/Companies/CompaniesList.vue";
+import CompanyForm from "@/Components/Admin/CRM/Companies/AddCompanyForm.vue";
 
 import { Head } from "@inertiajs/inertia-vue3";
 
@@ -29,10 +28,7 @@ export default {
         AdminLayout,
         Head,
         HeaderLinks,
-        CompaniesList,
-    },
-    props: {
-        companies: Object
+        CompanyForm
     },
 };
 </script>

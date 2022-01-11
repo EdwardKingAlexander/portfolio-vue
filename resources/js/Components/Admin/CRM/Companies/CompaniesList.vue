@@ -22,9 +22,13 @@
             </li>
           </ol>
         </nav>
-        <h1 class="mt-2 text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-          All Companies
-        </h1>
+       
+         <button @click="addCompany" class="p-2 m-2 
+                text-white 
+                mt-2 text-2xl font-semibold leading-7 sm:text-3xl sm:truncate
+                bg-blue-400 border-2 border-opacity-50 border-blue-200 rounded 
+                hover:text-blue-400 hover:bg-white hover:border-blue-400 hover:font-bold" >Add New Company</button>
+     
         
       </div>
       <div>
@@ -163,9 +167,19 @@
 </template>
 
 <script>
+import {Link} from "@inertiajs/inertia-vue3";
+
 export default {
+    components: {
+        Link
+    },
     props: {
         companies: Object
+    },
+    methods: {
+        addCompany() {
+            this.$inertia.get('/admin/crm/companies/create');
+        }
     }
 }
 </script>

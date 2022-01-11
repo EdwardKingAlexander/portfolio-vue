@@ -28,7 +28,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Admin/CRM/Companies/Create');
     }
 
     /**
@@ -39,7 +39,38 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'companyName' => 'required',
+            'about' => 'required|string',
+            'slug' => 'required|string',
+            'streetAddress' => 'required|string',
+            'city' => 'required|string',
+            'state' => 'required|string',
+            'zipCode' => 'required|string',
+            'emailAddress' => 'required|string',
+            'url' => 'required|string',
+            'phone' => 'required|string',
+            'fax' => 'required|string'
+        ]);
+
+        Company::create([
+                'company_name' => $request->companyName,
+                'about' => $request->about,
+                'slug' => $request->slug,
+                'is_customer' => false,
+                'last_contact' => $request->lastContact,
+                'street_address' => $request->streetAddress,
+                'city' => $request->city,
+                'state' => $request->state,
+                'zip_code' => $request->zipeCode,
+                'email_address' => $request->emailAddress,
+                'url' => $request->url,
+                'phone' => $request->phone,
+                'fax' => $request->fax,
+                'bill_to_address' => $request->billToAddress
+        ]);
+
+        return redirect('/admin/crm/companies');
     }
 
     /**

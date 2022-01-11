@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/admin/crm/companies', [CompanyController::class, 'index'])->name('admin.crm.companies.index');
+Route::get('/admin/crm/companies/create', [CompanyController::class, 'create'])->name('admin.crm.companies.create');
 Route::get('/admin/crm/companies/{company:slug}', [CompanyController::class, 'show'])->name('admin.crm.companies.show');
+
+Route::post('/admin/crm/companies', [CompanyController::class, 'store'])->name('admin.crm.companies.store');
+
 
 
 

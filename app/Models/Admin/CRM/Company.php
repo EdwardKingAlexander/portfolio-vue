@@ -37,5 +37,9 @@ class Company extends Model
         return 'slug';
     }
 
+    public function showNotes() {
+        return $this->hasMany(CompanyNote::class, 'company_id');
+    }
+
 
 }

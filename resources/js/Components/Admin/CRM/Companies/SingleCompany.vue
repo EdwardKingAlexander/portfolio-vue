@@ -1,80 +1,13 @@
 <template>
   
 <div class="min-h-full">
-  <header class="bg-white shadow">
-   
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="border-t border-gray-200 py-3">
-        <nav class="flex" aria-label="Breadcrumb">
-          <div class="flex sm:hidden">
-            <a href="#" class="group inline-flex space-x-3 text-sm font-medium text-gray-500 hover:text-gray-700">
-              <!-- Heroicon name: solid/arrow-narrow-left -->
-              <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-              </svg>
-              <span>Back to Applicants</span>
-            </a>
-          </div>
-          <div class="hidden sm:block">
-            <ol role="list" class="flex items-center space-x-4">
-              <li>
-                <div>
-                  <a :href="route('admin.dashboard')" class="text-gray-400 hover:text-gray-500">
-                    <!-- Heroicon name: solid/home -->
-                    <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                    </svg>
-                    <span class="sr-only">Home</span>
-                  </a>
-                </div>
-              </li>
-
-              <li>
-                <div class="flex items-center">
-                  <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-                  </svg>
-                  <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Jobs</a>
-                </div>
-              </li>
-
-              <li>
-                <div class="flex items-center">
-                  <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-                  </svg>
-                  <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Front End Developer</a>
-                </div>
-              </li>
-
-              <li>
-                <div class="flex items-center">
-                  <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-                  </svg>
-                  <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">Applicants</a>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
 
   <main class="py-10">
     <!-- Page header -->
     <div class="max-w-3xl mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
       <div class="flex items-center space-x-5">
-        <div class="flex-shrink-0">
-          <div class="relative">
-            <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-            <span class="absolute inset-0 shadow-inner rounded-full" aria-hidden="true"></span>
-          </div>
-        </div>
         <div>
-          <h1 class="text-2xl font-bold text-gray-900">Ricardo Cooper</h1>
+          <h1 class="text-2xl font-bold text-gray-900">{{ company.company_name }}</h1>
           <p class="text-sm font-medium text-gray-500">Applied for <a href="#" class="text-gray-900">Front End Developer</a> on <time datetime="2020-08-25">August 25, 2020</time></p>
         </div>
       </div>
@@ -202,68 +135,17 @@
               </div>
               <div class="px-4 py-6 sm:px-6">
                 <ul role="list" class="space-y-8">
-                  <li>
-                    <div class="flex space-x-3">
-                      <div class="flex-shrink-0">
-                        <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                      </div>
-                      <div>
-                        <div class="text-sm">
-                          <a href="#" class="font-medium text-gray-900">Leslie Alexander</a>
-                        </div>
-                        <div class="mt-1 text-sm text-gray-700">
-                          <p>Ducimus quas delectus ad maxime totam doloribus reiciendis ex. Tempore dolorem maiores. Similique voluptatibus tempore non ut.</p>
-                        </div>
-                        <div class="mt-2 text-sm space-x-2">
-                          <span class="text-gray-500 font-medium">4d ago</span>
-                          <span class="text-gray-500 font-medium">&middot;</span>
-                          <button type="button" class="text-gray-900 font-medium">Reply</button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                
 
-                  <li>
-                    <div class="flex space-x-3">
-                      <div class="flex-shrink-0">
-                        <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                      </div>
-                      <div>
-                        <div class="text-sm">
-                          <a href="#" class="font-medium text-gray-900">Michael Foster</a>
-                        </div>
-                        <div class="mt-1 text-sm text-gray-700">
-                          <p>Et ut autem. Voluptatem eum dolores sint necessitatibus quos. Quis eum qui dolorem accusantium voluptas voluptatem ipsum. Quo facere iusto quia accusamus veniam id explicabo et aut.</p>
-                        </div>
-                        <div class="mt-2 text-sm space-x-2">
-                          <span class="text-gray-500 font-medium">4d ago</span>
-                          <span class="text-gray-500 font-medium">&middot;</span>
-                          <button type="button" class="text-gray-900 font-medium">Reply</button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  
 
-                  <li>
-                    <div class="flex space-x-3">
-                      <div class="flex-shrink-0">
-                        <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                      </div>
-                      <div>
-                        <div class="text-sm">
-                          <a href="#" class="font-medium text-gray-900">Dries Vincent</a>
-                        </div>
-                        <div class="mt-1 text-sm text-gray-700">
-                          <p>Expedita consequatur sit ea voluptas quo ipsam recusandae. Ab sint et voluptatem repudiandae voluptatem et eveniet. Nihil quas consequatur autem. Perferendis rerum et.</p>
-                        </div>
-                        <div class="mt-2 text-sm space-x-2">
-                          <span class="text-gray-500 font-medium">4d ago</span>
-                          <span class="text-gray-500 font-medium">&middot;</span>
-                          <button type="button" class="text-gray-900 font-medium">Reply</button>
-                        </div>
-                      </div>
-                    </div>
+                  <!-- Note here -->
+                  <li v-for="note in notes" :key="note.id">
+                      <SingleNote :note="note" />
                   </li>
+                  
+
+
                 </ul>
               </div>
             </div>
@@ -273,10 +155,10 @@
                   <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="">
                 </div>
                 <div class="min-w-0 flex-1">
-                  <form action="#">
+                  <form @submit.prevent="addNote">
                     <div>
                       <label for="comment" class="sr-only">About</label>
-                      <textarea id="comment" name="comment" rows="3" class="shadow-sm block w-full focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300 rounded-md" placeholder="Add a note"></textarea>
+                      <textarea v-model="form.note" id="comment" name="comment" rows="3" class="shadow-sm block w-full focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300 rounded-md" placeholder="Add a note"></textarea>
                     </div>
                     <div class="mt-3 flex items-center justify-between">
                       <a href="#" class="group inline-flex items-start text-sm space-x-2 text-gray-500 hover:text-gray-900">
@@ -289,7 +171,7 @@
                         </span>
                       </a>
                       <button type="submit" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        Comment
+                        Add New Note
                       </button>
                     </div>
                   </form>
@@ -439,3 +321,32 @@
 </div>
 
 </template>
+
+<script>
+import SingleNote from '@/Components/Admin/CRM/Companies/SingleNote.vue';
+
+export default {
+    components: {
+        SingleNote
+    },
+    data() {
+        return {
+            form: {
+                note: null,
+                companyId: this.company.id,
+                slug: this.company.slug
+            }
+        }
+    },
+    props: {
+        company: Object,
+        notes: Object
+    },
+    methods: {
+        addNote() {
+            this.$inertia.post(`/admin/crm/companies/${this.company.slug}/notes`, this.form);
+            this.form.note = '';
+        }
+    }
+}
+</script>

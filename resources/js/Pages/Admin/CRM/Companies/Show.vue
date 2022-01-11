@@ -3,13 +3,11 @@
 
     <AdminLayout>
         <template #header>
-            <h2 class="pb-3 text-xl font-semibold leading-tight text-gray-800">
-                {{ company.company_name }}
-            </h2>
+            
             <HeaderLinks />
 
         </template>
-        <Company />
+        <Company :company="company" :notes="notes" />
     </AdminLayout>
 </template>
 
@@ -28,7 +26,8 @@ export default {
         Company
     },
     props: {
-        company: Object
+        company: Object,
+        notes: Object
     }
 };
 </script>

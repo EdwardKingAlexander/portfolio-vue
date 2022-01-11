@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CompanyController;
+use App\Http\Controllers\Admin\CompanyNoteController;
 use App\Http\Controllers\Admin\CrmController;
 use App\Http\Controllers\Admin\CustomerController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ Route::get('/admin/crm/companies/create', [CompanyController::class, 'create'])-
 Route::get('/admin/crm/companies/{company:slug}', [CompanyController::class, 'show'])->name('admin.crm.companies.show');
 
 Route::post('/admin/crm/companies', [CompanyController::class, 'store'])->name('admin.crm.companies.store');
+
+Route::post('/admin/crm/companies/{company:slug}/notes', [CompanyNoteController::class, 'store'])->name('admin.crm.companies.notes.store');
 
 
 

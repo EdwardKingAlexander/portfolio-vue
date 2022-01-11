@@ -81,8 +81,10 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
+
         return Inertia::render('Admin/CRM/Companies/Show', [
-            'company' => $company
+            'company' => $company,
+            'notes' => $company->showNotes
         ]);
     }
 

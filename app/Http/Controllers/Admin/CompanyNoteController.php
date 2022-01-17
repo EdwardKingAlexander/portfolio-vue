@@ -24,4 +24,11 @@ class CompanyNoteController extends Controller
 
         return redirect("/admin/crm/companies/$request->slug");
     }
+
+    public function destroy($slug, $id)
+    {
+        CompanyNote::destroy($id);
+
+        return redirect("/admin/crm/companies/$slug");
+    }
 }

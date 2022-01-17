@@ -21,8 +21,9 @@ class CompanyNote extends Model
  *
  * @var array
  */
-protected $casts = [
+    protected $casts = [
     'created_at' => 'datetime:m/d/Y',
+    'updated_at' => 'datetime:m/d/Y',
 ];
 
     protected $fillable = [

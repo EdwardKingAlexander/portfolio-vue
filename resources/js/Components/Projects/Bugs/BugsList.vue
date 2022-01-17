@@ -21,7 +21,7 @@
                             <p
                                 :class="'text-sm flex flex-wrap font-bold ' + bug.resolved ? 'text-green-600' : 'text-red-600' "
                             >
-                                {{ bug.solution ? bug.solution : 'No current solution' }}
+                               Potential sollution: {{ bug.solution ? bug.solution : 'No current solution' }}
                             </p>
 
                             </Link>

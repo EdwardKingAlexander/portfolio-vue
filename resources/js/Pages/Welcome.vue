@@ -1,35 +1,53 @@
 <template>
-    <Head title="Welcome" />
+    <Head title="Website Development Experts" />
 
-    <div class="relative flex justify-center min-h-screen bg-gray-100 items-top dark:bg-gray-900 sm:items-center sm:pt-0">
-        <div v-if="canLogin" class="fixed top-0 right-0 hidden px-6 py-4 sm:block">
-            <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-sm text-gray-700 underline">
-                Dashboard
-            </Link>
-
-            <template v-else>
-                <Link :href="route('login')" class="text-sm text-gray-700 underline">
-                    Log in
-                </Link>
-
-                <Link v-if="canRegister" :href="route('register')" class="ml-4 text-sm text-gray-700 underline">
-                    Register
-                </Link>
-            </template>
-        </div>
-
-    </div>
+    <Container>
+        <template #navigation>
+            <Navigation :canRegister="canRegister" :canLogin="canLogin" />
+        </template>
+    <Hero>
+        <template #main-content>
+            <Features />
+            <CallToAction />
+            <CallToActionTwo />
+            <Stats />
+            <BlogPreview />
+            <SupportSection />
+            
+        </template>
+    </Hero>
+    </Container>
+   
+    <Footer />
 </template>
 
-
-
 <script>
-import { Head, Link } from '@inertiajs/inertia-vue3';
+import { Head, Link } from "@inertiajs/inertia-vue3";
+import Container from "@/Components/ClientSide/Container.vue";
+import Navigation from "@/Components/ClientSide/Navigation.vue";
+import Hero from "@/Components/ClientSide/Hero.vue";
+import Features from "@/Components/ClientSide/Features.vue";
+import CallToAction from "@/Components/ClientSide/CallToAction.vue";
+import BlogPreview from "@/Components/ClientSide/BlogPreview.vue";
+import SupportSection from "@/Components/ClientSide/SupportSection.vue";
+import Stats from "@/Components/ClientSide/Stats.vue";
+import Footer from "@/Components/ClientSide/Footer.vue";
+import CallToActionTwo from "@/Components/ClientSide/CallToActionTwo.vue";
 
 export default {
     components: {
-      Head,
-      Link,
+        Head,
+        Link,
+        Container,
+        Navigation,
+        Hero,
+        Features,
+        CallToAction,
+        BlogPreview,
+        SupportSection,
+        Stats,
+        Footer,
+        CallToActionTwo,
     },
     props: {
         canLogin: Boolean,
@@ -37,5 +55,10 @@ export default {
         laravelVersion: String,
         phpVersion: String,
     },
-}
+    data() {
+        return {
+            email: null
+        }
+    }
+};
 </script>

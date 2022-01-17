@@ -11,14 +11,14 @@ class Company extends Model
     use HasFactory;
 
     /**
-     * 
+     *
      * @return CompanyFactory
      */
 
-     protected static function newFactory()
-     {
-         return CompanyFactory::new();
-     }
+    protected static function newFactory()
+    {
+        return CompanyFactory::new();
+    }
 
     /**
      * The table associated with the model.
@@ -32,14 +32,24 @@ class Company extends Model
         'email_address', 'url', 'phone', 'fax', 'bill_to_address', 'slug'
     ];
 
+    
+    /**
+ * The attributes that should be cast.
+ *
+ * @var array
+ */
+    protected $casts = [
+    'created_at' => 'datetime:m/d/Y',
+    'updated_at' => 'datetime:m/d/Y',
+];
+
     public function getRouteKeyName()
     {
         return 'slug';
     }
 
-    public function showNotes() {
+    public function showNotes()
+    {
         return $this->hasMany(CompanyNote::class, 'company_id');
     }
-
-
 }

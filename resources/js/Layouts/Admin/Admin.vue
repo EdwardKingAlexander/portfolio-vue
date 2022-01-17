@@ -217,6 +217,13 @@
                         >
                             Projects
                         </BreezeResponsiveNavLink>
+
+                        <BreezeResponsiveNavLink
+                            :href="route('admin.crm.index')"
+                            :active="$page.url.startsWith('/admin/crm')"
+                        >
+                            CRM
+                        </BreezeResponsiveNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->

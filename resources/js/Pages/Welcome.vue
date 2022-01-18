@@ -53,11 +53,6 @@ export default {
         canRegister: Boolean,
         laravelVersion: String,
         phpVersion: String,
-    },
-    data() {
-        return {
-            email: null
-        }
     }
 };
 </script>

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { Head, Link } from "@inertiajs/inertia-vue3";
+import { Head } from "@inertiajs/inertia-vue3";
 import Container from "@/Components/ClientSide/Container.vue";
 import Navigation from "@/Components/ClientSide/Navigation.vue";
 import Hero from "@/Components/ClientSide/Hero.vue";
@@ -37,7 +37,6 @@ import CallToActionTwo from "@/Components/ClientSide/CallToActionTwo.vue";
 export default {
     components: {
         Head,
-        Link,
         Container,
         Navigation,
         Hero,

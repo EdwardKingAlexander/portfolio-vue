@@ -207,7 +207,7 @@
                 class="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between"
             >
                 <div class="flex space-x-6 md:order-2">
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                    <a href="https://www.facebook.com/RockyMountainWebDesign/" class="text-gray-400 hover:text-gray-300">
                         <span class="sr-only">Facebook</span>
                         <svg
                             class="w-6 h-6"
@@ -223,7 +223,7 @@
                         </svg>
                     </a>
 
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                    <a href="https://www.instagram.com/rockymountainwebdesign/" class="text-gray-400 hover:text-gray-300">
                         <span class="sr-only">Instagram</span>
                         <svg
                             class="w-6 h-6"
@@ -239,7 +239,7 @@
                         </svg>
                     </a>
 
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                    <a href="https://twitter.com/RockyMountnWeb" class="text-gray-400 hover:text-gray-300">
                         <span class="sr-only">Twitter</span>
                         <svg
                             class="w-6 h-6"
@@ -253,7 +253,7 @@
                         </svg>
                     </a>
 
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                    <a href="https://github.com/EdwardKingAlexander" class="text-gray-400 hover:text-gray-300">
                         <span class="sr-only">GitHub</span>
                         <svg
                             class="w-6 h-6"
@@ -269,7 +269,7 @@
                         </svg>
                     </a>
 
-                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                    <a href="https://www.youtube.com/channel/UCubBZaePGnzvJPLuoLcdKtA" class="text-gray-400 hover:text-gray-300">
                         <span class="sr-only">YouTube</span>
                         <svg
                             class="w-6 h-6"

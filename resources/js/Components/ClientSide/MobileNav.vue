@@ -1,19 +1,10 @@
 <template>
-    <!--
-      Mobile menu, show/hide based on menu open state.
-
-      Entering: "duration-150 ease-out"
-        From: "opacity-0 scale-95"
-        To: "opacity-100 scale-100"
-      Leaving: "duration-100 ease-in"
-        From: "opacity-100 scale-100"
-        To: "opacity-0 scale-95"
-    -->
+    
     <div v-if="show" class="absolute inset-x-0 top-0 z-10 p-2 transition origin-top transform md:hidden">
       <div class="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
         <div class="flex items-center justify-between px-5 pt-4">
           <div>
-            <img class="w-auto h-8" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="">
+            <img class="w-auto h-12" src="/img/logo.svg" alt="Company Logo">
           </div>
           <div class="-mr-2">
             <button @click="toggleMobileNav" type="button" class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600">

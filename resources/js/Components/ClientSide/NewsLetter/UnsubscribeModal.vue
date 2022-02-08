@@ -20,13 +20,13 @@
           </h3>
           <div class="mt-2">
             <p class="text-sm text-gray-500">
-              {{ message }} All of your data will be permanently removed from our servers forever. This action cannot be undone.
+              {{ message }}
             </p>
           </div>
         </div>
       </div>
       <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-        <button @click="deleteNote" type="button" class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+        <button @click="confirm" type="button" class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
           {{ mode }}
         </button>
         <button @click="cancel" type="button" class="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:w-auto sm:text-sm">
@@ -46,12 +46,10 @@ export default {
     props: {
         mode: String,
         message: String,
-        id: Number,
-        slug: String
     },
     methods: {
-        deleteNote() {
-            this.$inertia.delete(`/admin/crm/companies/${this.slug}/notes/${this.id}`);
+        confirm() {
+            this.$inertia.delete(`/`);
         },
         cancel() {
             this.$emit('closeModal');

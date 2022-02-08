@@ -2,12 +2,12 @@
     <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="relative py-16 bg-white sm:py-24 lg:py-32">
   <div class="max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-    <h2 class="text-base font-semibold tracking-wider text-blue-600 uppercase">Deploy faster</h2>
+    <h2 class="text-base font-semibold tracking-wider text-blue-600 uppercase">Upgrade Your Business</h2>
     <p class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-      Everything you need to deploy your app
+      Everything you need to grow your business
     </p>
     <p class="mx-auto mt-5 text-xl text-gray-500 max-w-prose">
-      Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.
+      Not having a search engine optimized website means you're missing out on a lot of prospective customers for your producs or services. 
     </p>
     <div class="mt-12">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -22,9 +22,9 @@
                   </svg>
                 </span>
               </div>
-              <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Push to Deploy</h3>
+              <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Hosting</h3>
               <p class="mt-5 text-base text-gray-500">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                We provide affordable hosting services specific to your needs and requirements and can easily scale with your demands.
               </p>
             </div>
           </div>
@@ -43,7 +43,7 @@
               </div>
               <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">SSL Certificates</h3>
               <p class="mt-5 text-base text-gray-500">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                SSL lets search engines and browsersknow that your website can be trusted. We provide SSL certificates on all websites hosted with us.
               </p>
             </div>
           </div>
@@ -54,15 +54,15 @@
             <div class="-mt-6">
               <div>
                 <span class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
-                  <!-- Heroicon name: outline/refresh -->
-                  <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  <!-- Heroicon name: outline/chat -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </span>
               </div>
-              <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Simple Queues</h3>
+              <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Customer Support</h3>
               <p class="mt-5 text-base text-gray-500">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                We provide excellent customer service and support. Easily reachable and very responsive, our team members can get you the answers you need without delay.
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@
               </div>
               <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Advanced Security</h3>
               <p class="mt-5 text-base text-gray-500">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                Laravel, the framework we build our websites with, have teams dedicated to the security of their framework. So, you don't have to worry about the security of your website.
               </p>
             </div>
           </div>
@@ -93,15 +93,14 @@
               <div>
                 <span class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
                   <!-- Heroicon name: outline/cog -->
-                  <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+</svg>
                 </span>
               </div>
-              <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Powerful API</h3>
+              <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Mobile First Design</h3>
               <p class="mt-5 text-base text-gray-500">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                With nearly 60% of all online searches being carried out on mobile devices, we design all of our websites to be responsive on all devices.
               </p>
             </div>
           </div>
@@ -120,7 +119,7 @@
               </div>
               <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Database Backups</h3>
               <p class="mt-5 text-base text-gray-500">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                When it comes to data, we can provide backups to ensure the most important parts of your online business are not lost.
               </p>
             </div>
           </div>

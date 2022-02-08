@@ -15,26 +15,26 @@
         Valuable Metrics
       </h2>
       <p class="mt-3 text-3xl font-extrabold text-white">Get actionable data that will help grow your business</p>
-      <p class="mt-5 text-lg text-gray-300">Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam sit tellus quis at.</p>
+      <p class="mt-5 text-lg text-gray-300">There are many things that can help grow your business presence on the internet. Knowing what to do in order to get more traffic to your website, keep them there, and get them to take action, is the difference between your website being a billboard in the desert or a tool to drive profits. Here's just a few:</p>
       <div class="grid grid-cols-1 mt-12 gap-y-12 gap-x-6 sm:grid-cols-2">
         <p>
-          <span class="block text-2xl font-bold text-white">8K+</span>
-          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Companies</span> use laoreet amet lacus nibh integer quis.</span>
+          <span class="block text-2xl font-bold text-white">91.9%</span>
+          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Of people</span> use Google to find information, products, or services.</span>
         </p>
 
         <p>
-          <span class="block text-2xl font-bold text-white">25K+</span>
-          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Countries around the globe</span> lacus nibh integer quis.</span>
+          <span class="block text-2xl font-bold text-white">90%</span>
+          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Of people</span> said they were more likely to click on the results of the first page.</span>
         </p>
 
         <p>
-          <span class="block text-2xl font-bold text-white">98%</span>
-          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Customer satisfaction</span> laoreet amet lacus nibh integer quis.</span>
+          <span class="block text-2xl font-bold text-white">46%</span>
+          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Of product searches begin on Google.</span> laoreet amet lacus nibh integer quis.</span>
         </p>
 
         <p>
-          <span class="block text-2xl font-bold text-white">12M+</span>
-          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Issues resolved</span> lacus nibh integer quis.</span>
+          <span class="block text-2xl font-bold text-white">23%</span>
+          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Of all site visits</span> were organic search produced (non-paid search).</span>
         </p>
       </div>
     </div>

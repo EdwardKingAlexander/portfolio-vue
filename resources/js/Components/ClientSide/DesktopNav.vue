@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-6 bg-gray-900">
+    <div class="pt-6 pb-3 bg-gray-900">
         <nav
             class="relative flex items-center justify-between px-4 mx-auto max-w-7xl sm:px-6"
             aria-label="Global"
@@ -7,7 +7,7 @@
             <div class="flex items-center flex-1">
                 <div class="flex items-center justify-between w-full md:w-auto">
                     <a href="/">
-                        <span class="sr-only">Workflow</span>
+                        <span class="sr-only">Rocky Mountain Web Design LLC</span>
                         <img
                             class="w-auto h-10 sm:h-10"
                             src="/img/whitelogo.png"
@@ -51,7 +51,7 @@
                     <a
                         href="#"
                         class="text-base font-medium text-white hover:text-gray-300"
-                        >Features</a
+                        >Services</a
                     >
 
                     <a

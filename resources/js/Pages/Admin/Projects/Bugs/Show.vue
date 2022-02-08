@@ -12,12 +12,7 @@
             <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto text-center">
                     <h2
-                        class="
-                            text-3xl
-                            font-extrabold
-                            text-gray-900
-                            sm:text-4xl
-                        "
+                        class="text-3xl font-extrabold text-gray-900  sm:text-4xl"
                     >
                         {{ bug.bug_description }}
                     </h2>
@@ -38,27 +33,7 @@
                         ])
                     "
                     v-if="bug.resolved"
-                    class="
-                        relative
-                        inline-flex
-                        items-center
-                        px-4
-                        py-2
-                        text-sm
-                        font-medium
-                        text-white
-                        visited:text-white
-                        bg-blue-400
-                        border border-black
-                        rounded
-                        hover:bg-green-500
-                        focus:z-10
-                        focus:outline-none
-                        focus:ring-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        m-2
-                    "
+                    class="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium text-white bg-blue-400 border border-black rounded  visited:text-white hover:bg-green-500 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                 >
                     <p class="text-sm font-medium text-indigo-600 truncate">
                         Additional Solution Details
@@ -73,48 +48,14 @@
                         ])
                     "
                     v-else
-                    class="
-                        relative
-                        inline-flex
-                        items-center
-                        px-4
-                        py-2
-                        text-sm
-                        font-medium
-                        text-white
-                        visited:text-white
-                        bg-blue-400
-                        border border-gray-300
-                        rounded
-                        hover:bg-green-400
-                        focus:z-10
-                        focus:outline-none
-                        focus:ring-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        m-2
-                    "
+                    class="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium text-white bg-blue-400 border border-gray-300 rounded  visited:text-white hover:bg-green-400 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                 >
                     Provide Solution
                 </Link>
             </span>
             <span class="relative z-0 inline-flex rounded-md shadow-sm">
                 <button
-                    class="
-                        bg-red-500
-                        hover:bg-red-700
-                        m-2
-                        text-white
-                        px-4
-                        py-2
-                        font-medium
-                        text-sm
-                        items-center
-                        relative
-                        inline-flex
-                        rounded
-                        border border-yellow-500
-                    "
+                    class="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium text-white bg-red-500 border border-yellow-500 rounded  hover:bg-red-700"
                     @click="deleteBug"
                 >
                     Delete Bug

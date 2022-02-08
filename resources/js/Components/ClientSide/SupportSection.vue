@@ -1,5 +1,4 @@
 <template>
-    <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="bg-white">
   <!-- Header -->
   <div class="relative pb-32 bg-gray-800">
@@ -9,7 +8,7 @@
     </div>
     <div class="relative px-4 py-24 mx-auto max-w-7xl sm:py-32 sm:px-6 lg:px-8">
       <h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">Support</h1>
-      <p class="max-w-3xl mt-6 text-xl text-gray-300">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames. Dui, amet, nec sit pulvinar.</p>
+      <p class="max-w-3xl mt-6 text-xl text-gray-300">Whether you need assistance with your website, need to speak with us about pricing, or would like to speak with us regarding advertising services, we are here to help.</p>
     </div>
   </div>
 

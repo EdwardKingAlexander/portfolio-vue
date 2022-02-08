@@ -20,7 +20,7 @@
           <div class="px-2 space-y-1">
             <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Product</Link>
 
-            <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Features</Link>
+            <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Services</Link>
 
             <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Marketplace</Link>
 

@@ -16,6 +16,6 @@ class EmailList extends Model
      */
     protected $table = 'email_list';
 
-   protected $guarded = [];
+   protected $fillable = ['email'];
 
 }

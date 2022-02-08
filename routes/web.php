@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmailListController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,27 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+
+/*
+|--------------------------------------------------------------------------
+| NewsLetter Routes
+|--------------------------------------------------------------------------
+|
+|
+*/
+
 Route::post('/email-list', [EmailListController::class, 'store']);
+
+
+/*
+|--------------------------------------------------------------------------
+| Front Page Contact form Routes
+|--------------------------------------------------------------------------
+|
+|
+*/
+Route::post('/contact', [ContactController::class, 'store']);
 
 
 require __DIR__.'/auth.php';

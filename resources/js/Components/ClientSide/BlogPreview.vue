@@ -7,7 +7,7 @@
         Recent publications
       </h2>
       <p class="mt-3 text-xl text-gray-500 sm:mt-4">
-        Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.
+        We post about technology, business, and anything we believe will give the readers value. Below are some of our latest blog posts.
       </p>
     </div>
     <div class="grid gap-16 pt-12 mt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">

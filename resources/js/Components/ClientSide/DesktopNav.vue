@@ -45,12 +45,6 @@
                     <a
                         href="#"
                         class="text-base font-medium text-white hover:text-gray-300"
-                        >Product</a
-                    >
-
-                    <a
-                        href="#"
-                        class="text-base font-medium text-white hover:text-gray-300"
                         >Services</a
                     >
 
@@ -61,9 +55,15 @@
                     >
 
                     <a
+                        :href="route('about')"
+                        class="text-base font-medium text-white hover:text-gray-300"
+                        >About</a
+                    >
+
+                    <a
                         href="#"
                         class="text-base font-medium text-white hover:text-gray-300"
-                        >Company</a
+                        >Contact</a
                     >
                 </div>
             </div>
@@ -71,7 +71,7 @@
             <div v-if="canLogin !== isAdmin">
                 <Link
                     v-if="$page.props.auth.user"
-                    :href="route('dashboard')"
+                    :href="isAdmin ? '/dashboard' : '/admin/dashboard' "
                     class="hidden text-white md:flex md:items-center hover:text-gray-300 md:space-x-6"
                 >
                     Dashboard
@@ -96,6 +96,7 @@
                     </div>
                 </template>
             </div>
+           
         </nav>
     </div>
 </template>

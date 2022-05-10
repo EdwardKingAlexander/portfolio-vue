@@ -232,7 +232,7 @@
                                             >
                                                 <a
                                                     :href="
-                                                       company.url
+                                                       company.url    
                                                     "
                                                     >{{
                                                         company.url

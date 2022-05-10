@@ -4,7 +4,7 @@
                         and specials!`" />
   <SuccessMessage v-if="$page.props.flash.contactMessage" :newsletter="false" :title="`We have received your request.`" :message="`We will be in contact with you as soon as possible. If you would like to speak now, call 719-354-7012 and ask for Edward`" />
   <main>
-    <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+    <div class="pt-10 bg-gray-900 sm:py-8 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
       <div class="mx-auto max-w-7xl lg:px-8">
         <div class="lg:grid lg:grid-cols-2 lg:gap-8">
           <div class="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -29,13 +29,18 @@
                   <div class="sm:flex">
                     <div class="flex-1 min-w-0">
                       <label for="email" class="sr-only">Email address</label>
-                      <input v-model="email" id="email" type="email" required placeholder="Enter your email" class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300 focus:ring-offset-gray-900">
+                      <input v-model="email" id="email" type="email" required placeholder="Enter your email" class="block w-full px-4 py-3 text-base text-center text-gray-900 placeholder-gray-500 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300 focus:ring-offset-gray-900">
                     </div>
                     <div class="mt-3 sm:mt-0 sm:ml-3">
-                      <button type="submit" class="block w-full px-4 py-3 font-medium text-white bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300 focus:ring-offset-gray-900">Contact us now</button>
+                      <button type="submit" class="block w-full px-4 py-3 font-medium text-white bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300 focus:ring-offset-gray-900">Request an email</button>
+                    </div>
+                    <div class="mt-3 sm:mt-0 sm:ml-3">
+                      <a href="tel:7193547012" class="block w-full px-4 py-3 font-medium text-center text-blue-500 bg-white rounded-md shadow hover:bg-blue-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300 focus:ring-offset-gray-900">Call now</a>
                     </div>
                   </div>
+                  <div class="mt-3 sm:mt-0 sm:ml-3">
                   <p class="mt-3 text-sm text-gray-300 sm:mt-4">By providing your email, you agree to our <a href="#" class="font-medium text-white">terms of service</a>.</p>
+                  </div>
                 </form>
               </div>
             </div>

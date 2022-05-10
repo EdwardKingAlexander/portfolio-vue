@@ -29,7 +29,7 @@
 
         <p>
           <span class="block text-2xl font-bold text-white">46%</span>
-          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Of product searches begin on Google.</span> laoreet amet lacus nibh integer quis.</span>
+          <span class="block mt-1 text-base text-gray-300"><span class="font-medium text-white">Of product searches</span>  begin on Google.</span>
         </p>
 
         <p>

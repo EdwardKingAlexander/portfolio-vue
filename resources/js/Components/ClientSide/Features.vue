@@ -7,7 +7,7 @@
       Everything you need to grow your business
     </p>
     <p class="mx-auto mt-5 text-xl text-gray-500 max-w-prose">
-      Not having a search engine optimized website means you're missing out on a lot of prospective customers for your producs or services. 
+      Not having a trusted, search engine optimized, and effective website means you're missing out on a lot of prospective customers for your products or services. 
     </p>
     <div class="mt-12">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -43,7 +43,7 @@
               </div>
               <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">SSL Certificates</h3>
               <p class="mt-5 text-base text-gray-500">
-                SSL lets search engines and browsersknow that your website can be trusted. We provide SSL certificates on all websites hosted with us.
+                SSL lets search engines and browsers know that your website can be trusted. We provide SSL certificates on all websites hosted with us.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@
               </div>
               <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Customer Support</h3>
               <p class="mt-5 text-base text-gray-500">
-                We provide excellent customer service and support. Easily reachable and very responsive, our team members can get you the answers you need without delay.
+                Easily reachable and very responsive, our team members can get you the answers you need without delay.
               </p>
             </div>
           </div>

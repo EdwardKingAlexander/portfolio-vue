@@ -18,13 +18,13 @@
         </div>
         <div class="pt-5 pb-6">
           <div class="px-2 space-y-1">
-            <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Product</Link>
-
             <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Services</Link>
 
             <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Marketplace</Link>
 
-            <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Company</Link>
+            <Link :href="route('about')" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">About</Link>
+
+            <Link href="#" class="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">Contact</Link>
           </div>
           <div class="px-5 mt-6">
             <Link :href="route('register')" class="block w-full px-4 py-3 font-medium text-center text-white bg-blue-600 rounded-md shadow hover:bg-blue-700">Register</Link>

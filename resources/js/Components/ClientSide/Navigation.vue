@@ -1,6 +1,6 @@
 <template>
     <header class="relative">
-        <DesktopNav :show="show"  @toggleMobileNav="toggleMobileNav" :canLogin="canLogin" :canRegister="canRegister" />
+        <DesktopNav :show="show" :isAdmin="isAdmin"  @toggleMobileNav="toggleMobileNav" :canLogin="canLogin" :canRegister="canRegister" />
         <!-- Mobile Nav -->
         <MobileNav :show="show" @toggleMobileNav="toggleMobileNav" />
     </header>
@@ -19,6 +19,7 @@ export default {
     props: {
         canLogin: Boolean,
         canRegister: Boolean,
+        isAdmin: Boolean
     },
     data() {
         return {

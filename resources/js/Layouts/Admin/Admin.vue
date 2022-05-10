@@ -14,7 +14,7 @@
                         <div class="flex">
                             <!-- Logo -->
                             <div class="flex items-center flex-shrink-0">
-                                <Link :href="route('dashboard')">
+                                <Link href="/">
                                     <BreezeApplicationLogo
                                         class="block w-auto h-9"
                                     />
@@ -55,6 +55,16 @@
                                     "
                                 >
                                     CRM
+                                </BreezeNavLink>
+
+                                 <BreezeNavLink
+                                    :darkMode="dark.enabled"
+                                    
+                                    :active="
+                                        $page.url.startsWith('/admin/inventory')
+                                    "
+                                >
+                                    Inventory
                                 </BreezeNavLink>
 
                                 

@@ -12,11 +12,7 @@
           Schedule now
         </a>
       </div>
-      <div class="inline-flex ml-3">
-        <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-blue-700 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200">
-          Learn more
-        </a>
-      </div>
+      
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
+  <div class="max-w-2xl mx-auto bg-gray-200 p-6 rounded-lg shadow m-6">
     <h2 class="text-xl font-semibold mb-4">Upload and Convert .txt File</h2>
 
     <input
@@ -37,18 +37,18 @@ export default {
       if (!file) return;
 
       const reader = new FileReader();
+
       reader.onload = (e) => {
         const rawText = e.target.result;
 
-        // Normalize line breaks and split into lines
         const lines = rawText
-          .replace(/\r\n/g, '\n')
+          .replace(/\r\n/g, '\n') // Normalize line endings
           .split('\n')
           .filter(line => line.trim() !== '');
 
         const parsedLines = lines.map(line => {
-          // Split by tab or multiple spaces
-          return line.trim().split(/\t+|\s{2,}/).join('\t');
+          // Replace any group of 2+ spaces/tabs with a single tab
+          return line.trim().replace(/[ \t]{2,}/g, '\t');
         });
 
         convertedText.value = parsedLines.join('\n');

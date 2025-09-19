@@ -7,9 +7,24 @@
         </template>
    
         <template #main-content>
-               <TextToTabConverter />      
+               <TextToTabConverter />    
+               <div class="mx-auto text-center m-6">
+                <h1 class="text-xl ">Hello Nate</h1>
+                <p class="text-2xl font-bold underline">Instructions: </p>
+                    <ul class="list-disc list-inside">
+                        <li>Upload a .txt file with data separated by spaces or tabs.</li>
+                        <li>The tool will convert groups of 2 or more spaces/tabs into a single tab.</li>
+                        <li>Download the converted tab-delimited file.</li>
+                        <li>Open the Excel</li>
+                        <li>Select All File Types to find File</li>
+                        <li>Select Delimited -> Click Next</li>
+                        <li>Choose Tab AND space as the delimiters</li>
+                        <li>Click Finish</li>
+                    </ul>
+                
+               </div>  
 
-               <h1>Hello</h1>
+               
         </template>
    
     </Container>

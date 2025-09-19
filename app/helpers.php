@@ -1,9 +1,9 @@
 <?php
 
-use phpDocumentor\Reflection\Types\Boolean;
+// use phpDocumentor\Reflection\Types\Boolean;
 
-function test()
-    {
-        return 'tested successfully!';
-    }
+// function test()
+//     {
+//         return 'tested successfully!';
+//     }
 

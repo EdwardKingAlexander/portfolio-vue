@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmailListController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ToolController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -23,6 +24,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/about', AboutController::class)->name('about');
+
+Route::get('/tools', ToolController::class)->name('tools');
 
 
 /*

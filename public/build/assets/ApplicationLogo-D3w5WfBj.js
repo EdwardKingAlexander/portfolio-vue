@@ -1,0 +1,1 @@
+import{_ as s}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{c as t,o as e}from"./app-0z2Lxd3D.js";const n="/build/assets/mountainLogo-ZPUGd-yh.png",c={data(){return{logo:n}}},r=["src"];function a(p,i,l,_,o,m){return e(),t("img",{class:"",src:o.logo,alt:"Company Logo"},null,8,r)}const d=s(c,[["render",a]]);export{d as B};

@@ -50,3 +50,10 @@ Route::post('/contact', [ContactController::class, 'store']);
 
 
 require __DIR__.'/auth.php';
+
+if (app()->environment('local')) {
+    Route::get('/ignition-test', function () {
+        throw new \Exception('Ignition v2 smoke test');
+    });
+}
+

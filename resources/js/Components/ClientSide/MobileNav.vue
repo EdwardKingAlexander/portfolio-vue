@@ -4,7 +4,7 @@
       <div class="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
         <div class="flex items-center justify-between px-5 pt-4">
           <div>
-            <img class="w-auto h-12" src="/img/logo.svg" alt="Company Logo">
+            <img class="w-auto h-12" :src="logo" alt="Company Logo">
           </div>
           <div class="-mr-2">
             <button @click="toggleMobileNav" type="button" class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600">
@@ -39,18 +39,25 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+import logo from "../../../images/logo.svg";
 
 export default {
     components: {
-        Link
+        Link,
     },
     props: {
-        show: Boolean
+        show: Boolean,
+    },
+    data() {
+        return {
+            logo,
+        };
     },
     methods: {
         toggleMobileNav() {
             this.$emit('toggleMobileNav');
-        }
-    }
-}
+        },
+    },
+};
 </script>
+

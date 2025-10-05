@@ -28,7 +28,8 @@ class AuthenticationTest extends TestCase
         ]);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(RouteServiceProvider::HOME);
+        $expectedRedirect = $user->isAdmin() ? '/admin/dashboard' : RouteServiceProvider::HOME;
+        $response->assertRedirect($expectedRedirect);
     }
 
     public function test_users_can_not_authenticate_with_invalid_password()
@@ -43,3 +44,4 @@ class AuthenticationTest extends TestCase
         $this->assertGuest();
     }
 }
+

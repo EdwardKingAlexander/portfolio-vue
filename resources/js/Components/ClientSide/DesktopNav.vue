@@ -10,7 +10,7 @@
                         <span class="sr-only">Rocky Mountain Web Design LLC</span>
                         <img
                             class="w-auto h-10 sm:h-10"
-                            src="/img/whitelogo.png"
+                            :src="logo"
                             alt="Company Logo"
                         />
                     </a>
@@ -103,21 +103,28 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+import logo from "../../../images/whitelogo.png";
 
 export default {
     components: {
-        Link
+        Link,
     },
-     props: {
+    props: {
         canLogin: Boolean,
         canRegister: Boolean,
-        isAdmin: Boolean
+        isAdmin: Boolean,
+    },
+    data() {
+        return {
+            logo,
+        };
     },
     methods: {
-        toggleMobileNav()
-        {
+        toggleMobileNav() {
             this.$emit('toggleMobileNav');
-        }
-    }
-}
+        },
+    },
+};
 </script>
+
+
